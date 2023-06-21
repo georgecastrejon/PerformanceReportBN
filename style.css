@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Peaches en Regalia';
+  src: url('./Common/Fonts/Peaches en Regalia.ttf') format('truetype');  
+}
+
+body h3 {
+  color: #BBCEF3;
+  font-size: 25pt;
+  text-align: center;
+  margin-top: 60px;
+  font-family: 'Peaches en Regalia', sans-serif;
+}
+
+
+body {
+  background-image: url('./Common/Images/Wall/torrebn.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.container {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  max-width: 600px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.transparent-background {
+  background-color: transparent;
+  border-color: transparent;
+  cursor: default;
+}
+
+.transparent-background:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.container label {
+  font-weight: bold;
+  color: white;
+}
+
+.container input[type="text"],
+.container input[type="email"],
+.container input[type="number"],
+.container select,
+.container textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: rgba(128, 128, 128, 0.2);
+  color: white;
+}
+
+.container input[type="text"]::placeholder,
+.container input[type="email"]::placeholder,
+.container input[type="number"]::placeholder,
+.container select::placeholder {
+  color: #ccc;
+}
+
+.container input[type="submit"],
+.container input[type="reset"] {
+  width: auto;
+  margin-top: 20px;
+}

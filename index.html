@@ -1,91 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Banco de la Nación - Automatización de informes</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title id="dynamic_title"> Banco de la Nación - Automatización de informes </title>
+  <link rel="icon" href="./Common/Images/Icons/bn.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./Common/Images/Icons/bn.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
-  <style>
-
-    body {
-      background-image: url('./torrebn.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    h3 {
-      font-family: Calibri; 
-      font-size: 25pt;         
-      font-style: normal; 
-      font-weight: bold; 
-      color: SlateBlue;
-      text-align: center; 
-      text-decoration: underline;
-    }
-
-    .container {
-      margin-top: 50px;
-      margin-bottom: 50px;
-      max-width: 600px;
-      border: 2px solid rgba(0, 0, 0, 0);
-      border-radius: 10px;
-      padding: 30px;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .container label {
-      font-weight: bold;
-      color: white;
-    }
-
-    .container input[type="text"],
-    .container input[type="email"],
-    .container input[type="number"],
-    .container select,
-    .container textarea {
-      width: 100%;
-      padding: 8px;
-      border-radius: 5px;
-      border: 1px solid rgba(0, 0, 0, 0);
-      background-color: rgba(128, 128, 128, 0.2);
-      color: white;
-    }
-
-    .container input[type="text"]::placeholder,
-    .container input[type="email"]::placeholder,
-    .container input[type="number"]::placeholder,
-    .container select::placeholder {
-      color: #ccc;
-    }
-
-    .container input[type="submit"],
-    .container input[type="reset"] {
-      width: auto;
-      margin-top: 20px;
-    }
-
-  </style>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="container">
-    <h3>Automatización de informes</h3>
+  <h3>Automatización de informes</h3>	
 
+  <div class="container">
     <form>
       <div class="form-group">
         <input type="text" id="titulo" class="form-control" maxlength="30" placeholder="Título">
       </div>
 
-      <div class="form-group">
-        <input type="text" id="bannercli" class="form-control" maxlength="30" placeholder="Banner del banco">
-      </div>
+<div class="form-group">
+  <div class="row">
+    <div class="col">
+      <input type="text" id="bannercli" class="form-control" maxlength="30" placeholder="Banner del banco">
+    </div>
+    <div class="col-auto">
+<label for="bannercli2" class="btn btn-primary transparent-background">
+  <input type="file" id="bannercli2" class="form-control-file d-none" accept="image/*" maxlength="30" onchange="handleFileSelect(event)">
+  <img src="./Common/Images/Bottons/subir.png" alt="Seleccionar archivo" width="20" height="20">
+</label>
+    </div>
+  </div>
+</div>
 
       <div class="form-group">
         <input type="text" id="piepagina" class="form-control" maxlength="30" placeholder="Pie de página">
       </div>
 
       <div class="form-group">
-        <input type="text" id="cliente" class="form-control" maxlength="30" placeholder="cliente">
+        <input type="text" id="cliente" class="form-control" maxlength="30" placeholder="Cliente">
       </div>
 
       <div class="form-group">
@@ -100,135 +51,55 @@
         <input type="text" id="nombrerq" class="form-control" maxlength="30" placeholder="Nombre del requerimiento">
       </div>
 
-  <div class="form-group">
-        <label for="fecharq">Fecha del requerimiento</label>
+      <div class="form-group">
         <div class="row">
-          <div class="col">
-            <input type="text" id="fecharq" class="form-control datepicker" placeholder="Fecha del requerimiento">
-          </div>
+          <div class="col-4">
+		  <div class="d-flex align-items-center">
+            <input type="text" id="fecharq" class="form-control datepicker mr-2" placeholder="Fecha RQ">          
+      </div>
+		  </div>
         </div>
       </div>
-
+	  
       <div class="form-group">
         <input type="text" id="version" class="form-control" maxlength="30" placeholder="Versión">
       </div>
 
       <div class="form-group">
-        <label for="fechadoc">Fecha de creación del documento</label>
         <div class="row">
-          <div class="col">
-            <input type="text" id="fechadoc" class="form-control datepicker" placeholder="Fecha de creación del documento">
-          </div>
+          <div class="col-4">
+		  <div class="d-flex align-items-center">
+            <input type="text" id="fechadoc" class="form-control datepicker mr-2" placeholder="Fecha Doc">          
+      </div>
+		  </div>
         </div>
       </div>
+	 
 
-      <div class="form-group">
-        <input type="text" id="responsable" class="form-control" maxlength="30" placeholder="Responsable">
-      </div>
+<div class="form-group">
+  <select id="responsable" class="form-control">
+    <option value="">Responsable</option>    
+    <option value="George">George Castrejón</option>
+	<option value="Elizabeth">Elizabeth Neira</option>    
+	<option value="Saul">Saul Galán</option>
+  </select>
+</div>
 
       <div class="form-group">
         <textarea id="descambio" class="form-control" rows="4" placeholder="Descripción del cambio"></textarea>
       </div>
 
       <div class="form-group">
-        <label>Términos</label><br>
-        <table class="inner table table-bordered">
-          <thead>
-            <tr>
-              <th>Grupo A</th>
-              <th>Descripción</th>
-              <th>Grupo B</th>
-              <th>Descripción</th>
-              <th>Grupo C</th>
-              <th>Descripción</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><input type="text" class="form-control" maxlength="50" value="Jmeter"></td>
-              <td><input type="text" class="form-control" maxlength="50"></td>
-
-              <td><input type="text" class="form-control" maxlength="50" value="Transacción"></td>
-              <td><input type="text" class="form-control" maxlength="50"></td>
-
-              <td><input type="text" class="form-control" maxlength="50" value="Escenario"></td>
-              <td><input type="text" class="form-control" maxlength="5"></td>
-
-            </tr>
-
-            <td><input type="text" class="form-control" maxlength="50" value="Usuarios concurrentes"></td>
-            <td><input type="text" class="form-control" maxlength="50"></td>
-
-            <td><input type="text" class="form-control" maxlength="50" value="Proceso de negocio"></td>
-            <td><input type="text" class="form-control" maxlength="50"></td>
-
-            <td><input type="text" class="form-control" maxlength="50" value="Ventana de ejecución"></td>
-            <td><input type="text" class="form-control" maxlength="5"></td>
-
-          </tr>
-
-          <td><input type="text" class="form-control" maxlength="50" value="Pruebas de carga"></td>
-          <td><input type="text" class="form-control" maxlength="50"></td>
-
-          <td><input type="text" class="form-control" maxlength="50" value="Pruebas de estrés"></td>
-          <td><input type="text" class="form-control" maxlength="50"></td>
-
-          <td><input type="text" class="form-control" maxlength="50" value="TPS"></td>
-          <td><input type="text" class="form-control" maxlength="5"></td>
-
-        </tr>
-
-      </tbody>
-    </table>
-  </div>
-  <div class="form-group">
-    <label>GENDER</label><br>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="gender" id="gender-male" value="Male">
-      <label class="form-check-label" for="gender-male">Male</label>
-    </div>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="gender" id="gender-female" value="Female">
-      <label class="form-check-label" for="gender-female">Female</label>
-    </div>
+        <input type="submit" class="btn btn-primary" value="Descargar">
+        <input type="submit" class="btn btn-secondary" value="Precargar">
+        <input type="reset" class="btn btn-secondary" value="Limpiar">
+      </div>
+    </form>
   </div>
 
-  <div class="form-group">
-    <label>HOBBIES</label><br>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" name="hobbies" id="hobby-drawing" value="Drawing">
-      <label class="form-check-label" for="hobby-drawing">Drawing</label>
-    </div>    
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" name="hobbies" id="hobby-other">
-      <label class="form-check-label" for="hobby-other">Others</label>
-      <input type="text" id="other-hobby" class="form-control" maxlength="30">
-    </div>
-  </div>
-
-  <div class="form-group">
-    <input type="submit" class="btn btn-primary" value="Descargar">
-    <input type="submit" class="btn btn-secondary" value="Precargar">
-    <input type="reset" class="btn btn-secondary" value="Limpiar">
-  </div>
-</form>
-</div>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-    $(function() {
-      $(".datepicker").datepicker({
-        dateFormat: "dd/mm/yy",
-        changeMonth: true,
-        changeYear: true,
-        showOn: "button",
-        buttonImage: "https://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
-        buttonImageOnly: true,
-        buttonText: "Select date"
-      });
-    });
-  </script>
-
+  <script src="./Common/JavaScripts/script.js"></script>
+  
 </body>
 </html>
