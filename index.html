@@ -12,24 +12,24 @@
   <h3>Automatización de informes</h3>	
 
   <div class="container">
-    <form>
+    <form id="formulario">
       <div class="form-group">
-        <input type="text" id="titulo" class="form-control" maxlength="30" placeholder="Título">
+        <input type="text" id="titulo" name="titulo" class="form-control" maxlength="30" placeholder="Título">
       </div>
 
-<div class="form-group">
-  <div class="row">
-    <div class="col">
-      <input type="text" id="bannercli" class="form-control" maxlength="30" placeholder="Banner del banco">
-    </div>
-    <div class="col-auto">
-<label for="bannercli2" class="btn btn-primary transparent-background">
-  <input type="file" id="bannercli2" class="form-control-file d-none" accept="image/*" maxlength="30" onchange="handleFileSelect(event)">
-  <img src="./Common/Images/Bottons/subir.png" alt="Seleccionar archivo" width="20" height="20">
-</label>
-    </div>
-  </div>
-</div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col">
+            <input type="text" id="bannercli" class="form-control" maxlength="30" placeholder="Banner del banco">
+          </div>
+          <div class="col-auto">
+            <label for="bannercli2" class="btn btn-primary transparent-background">
+              <input type="file" id="bannercli2" class="form-control-file d-none" accept="image/*" maxlength="30" onchange="handleFileSelect(event)">
+              <img src="./Common/Images/Bottons/subir.png" alt="Seleccionar archivo" width="20" height="20">
+            </label>
+          </div>
+        </div>
+      </div>
 
       <div class="form-group">
         <input type="text" id="piepagina" class="form-control" maxlength="30" placeholder="Pie de página">
@@ -54,49 +54,50 @@
       <div class="form-group">
         <div class="row">
           <div class="col-4">
-		  <div class="d-flex align-items-center">
-            <input type="text" id="fecharq" class="form-control datepicker mr-2" placeholder="Fecha RQ">          
-      </div>
-		  </div>
+            <div class="d-flex align-items-center">
+              <input type="text" id="fecharq" class="form-control datepicker mr-2" placeholder="Fecha RQ">          
+            </div>
+		      </div>
         </div>
       </div>
 	  
       <div class="form-group">
-	  <div class="row">
+        <div class="row">
           <div class="col-3">
-        <input type="text" id="version" class="form-control" maxlength="30" placeholder="Versión">
-      </div>
-		  </div>
-	  </div>
+            <input type="text" id="version" class="form-control" maxlength="30" placeholder="Versión">
+          </div>
+        </div>
+	    </div>
 
       <div class="form-group">
         <div class="row">
           <div class="col-4">
-		  <div class="d-flex align-items-center">
-            <input type="text" id="fechadoc" class="form-control datepicker mr-2" placeholder="Fecha Doc">          
-      </div>
-		  </div>
+		        <div class="d-flex align-items-center">
+              <input type="text" id="fechadoc" class="form-control datepicker mr-2" placeholder="Fecha Doc">          
+            </div>
+		      </div>
         </div>
       </div>
 	 
 
-<div class="form-group">
-  <select id="responsable" class="form-control">
-    <option value="">Responsable</option>    
-    <option value="George">George Castrejón</option>
-	<option value="Elizabeth">Elizabeth Neira</option>    
-	<option value="Saul">Saul Galán</option>
-  </select>
-</div>
+      <div class="form-group">
+        <select id="responsable" class="form-control">
+          <option value="">Responsable</option>    
+          <option value="George">George Castrejón</option>
+          <option value="Elizabeth">Elizabeth Neira</option>    
+          <option value="Saul">Saul Galán</option>
+        </select>
+      </div>
 
       <div class="form-group">
         <textarea id="descambio" class="form-control" rows="4" placeholder="Descripción del cambio"></textarea>
       </div>
 
       <div class="form-group">
-        <input type="submit" class="btn btn-primary" value="Descargar">
+        <input type="submit" class="btn btn-primary" value="Descargar" id="descargar">
         <input type="submit" class="btn btn-secondary" value="Precargar">
         <input type="reset" class="btn btn-secondary" value="Limpiar">
+    </form>
       </div>
     </form>
   </div>
@@ -105,5 +106,6 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="./Common/JavaScripts/script.js"></script>
   
+  <script src="descargarWord.js"></script>
 </body>
 </html>
