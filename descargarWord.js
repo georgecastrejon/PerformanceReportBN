@@ -1,10 +1,9 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const submitButton = document.getElementById('descargar');
-    submitButton.addEventListener('click', descargarWordVacio);
+    submitButton.addEventListener('click', descargarWord);
 });
 
-function descargarWordVacio() {
+function descargarWord() {
     
     const titulo = document.getElementById('titulo').value;
     const cliente = document.getElementById('cliente').value;
