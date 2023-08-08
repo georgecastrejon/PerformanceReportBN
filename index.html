@@ -95,9 +95,10 @@
       </div>
 
       <div class="form-group">
-        <input type="submit" class="btn btn-primary" value="Descargar" id="descargar">
+        <input type="submit" class="btn btn-primary" value="Descargar" id="generateButton"> 
         <input type="submit" class="btn btn-secondary" value="Precargar" id="precargar">
         <input type="reset" class="btn btn-secondary" value="Limpiar" id="limpiar">
+        <input type="file" id="doc" />
     </form>
       </div>
     </form>
@@ -107,8 +108,17 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="./Common/JavaScripts/script.js"></script>
   
-  <script src="descargarWord.js"></script>
+  <!-- <script src="descargarWord.js"></script> -->
+  <!-- <script src="descargarTexto.js"></script> -->
   <script src="cargarPredeterminados.js"></script>
   <script src="limpiarCampos.js"></script>
+  <!-- <script src="wordTemplate.js"></script> -->
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.37.12/docxtemplater.js"></script>
+  <script src="https://unpkg.com/pizzip@3.1.4/dist/pizzip.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+  <script src="https://unpkg.com/pizzip@3.1.4/dist/pizzip-utils.js"></script>
+
+  <script src="descargarwordtemplate.js"></script>
 </body>
 </html>

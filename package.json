@@ -2,6 +2,7 @@
   "dependencies": {
     "docxtemplater": "^3.37.12",
     "file-saver": "^2.0.5",
-    "jszip": "^2.6.0"
+    "jszip": "^2.6.0",
+    "pizzip": "^3.1.4"
   }
 }
