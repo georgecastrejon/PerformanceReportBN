@@ -151,6 +151,9 @@
               <div class="col">
                 <button type="button" class="btn btn-secondary" id="addRowBtn">Agregar</button>
               </div>
+              <div class="col">
+                <button type="button" class="btn btn-secondary" id="precargarTerminos">Precargar</button>
+              </div>
             </div>
           </div>
         </div>
@@ -194,14 +197,12 @@
             <div class="col">
               <h5>Recomendaciones</h5>
               <textarea id="recomendaciones" class="form-control" rows="3" placeholder="Ingrese recomendaciones"></textarea>
-            </div>
-            <!-- 
+            </div> 
             <div class="row mt-3">
               <div class="col">
-                <button type="button" class="btn btn-secondary" id="btnGuardarDetalle">Guardar</button>
+                <button type="button" class="btn btn-secondary" id="precargarDetalle">Precargar</button>
               </div>
             </div>
-            -->
           </div>
         </div>
         <div class="modal-footer">
@@ -227,6 +228,7 @@
   <script src="cargarPredeterminados.js"></script>
   <script src="limpiarCampos.js"></script>
   <script src="descargarWordTemplate.js"></script>
+  <script src="cargarModalDetalle.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {

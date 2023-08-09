@@ -19,7 +19,7 @@ function generateDocument() {
     const estrategia = document.getElementById('estrategia').value;
     const conclusiones = document.getElementById('conclusiones').value;
     const recomendaciones = document.getElementById('recomendaciones').value;
-
+    
     const termino1 = document.getElementById('termino1').value;
     const termino2 = document.getElementById('termino2').value;
     const termino3 = document.getElementById('termino3').value;
@@ -38,7 +38,7 @@ function generateDocument() {
     const des_termino6 = document.getElementById('des_termino6').value;
     const des_termino7 = document.getElementById('des_termino7').value;
     const des_termino8 = document.getElementById('des_termino8').value;
-    const des_termino9 = document.getElementById('des_termino9').value;
+    const des_termino9 = document.getElementById('des_termino9').value; 
 
     if (docs.files.length === 0) {
       alert("No files selected");
@@ -76,7 +76,7 @@ function generateDocument() {
         estrategia: estrategia,
         conclusiones: conclusiones,
         recomendaciones: recomendaciones,
-
+        
         termino1: termino1,
         termino2: termino2,
         termino3: termino3,
