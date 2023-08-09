@@ -13,6 +13,33 @@ function generateDocument() {
     const responsable = document.getElementById('responsable').value;
     const descambio = document.getElementById('descambio').value;
   
+    const introduccion = document.getElementById('introduccion').value;
+    const consideraciones = document.getElementById('consideraciones').value;
+    const alcance = document.getElementById('alcance').value;
+    const estrategia = document.getElementById('estrategia').value;
+    const conclusiones = document.getElementById('conclusiones').value;
+    const recomendaciones = document.getElementById('recomendaciones').value;
+
+    const termino1 = document.getElementById('termino1').value;
+    const termino2 = document.getElementById('termino2').value;
+    const termino3 = document.getElementById('termino3').value;
+    const termino4 = document.getElementById('termino4').value;
+    const termino5 = document.getElementById('termino5').value;
+    const termino6 = document.getElementById('termino6').value;
+    const termino7 = document.getElementById('termino7').value;
+    const termino8 = document.getElementById('termino8').value;
+    const termino9 = document.getElementById('termino9').value;
+
+    const des_termino1 = document.getElementById('des_termino1').value;
+    const des_termino2 = document.getElementById('des_termino2').value;
+    const des_termino3 = document.getElementById('des_termino3').value;
+    const des_termino4 = document.getElementById('des_termino4').value;
+    const des_termino5 = document.getElementById('des_termino5').value;
+    const des_termino6 = document.getElementById('des_termino6').value;
+    const des_termino7 = document.getElementById('des_termino7').value;
+    const des_termino8 = document.getElementById('des_termino8').value;
+    const des_termino9 = document.getElementById('des_termino9').value;
+
     if (docs.files.length === 0) {
       alert("No files selected");
     }
@@ -41,7 +68,34 @@ function generateDocument() {
         version: version,
         fecha: fechadoc,
         responsable: responsable,
-        descripcioncambio: descambio
+        descripcioncambio: descambio,
+
+        introduccion: introduccion,
+        consideraciones: consideraciones,
+        alcance: alcance,
+        estrategia: estrategia,
+        conclusiones: conclusiones,
+        recomendaciones: recomendaciones,
+
+        termino1: termino1,
+        termino2: termino2,
+        termino3: termino3,
+        termino4: termino4,
+        termino5: termino5,
+        termino6: termino6,
+        termino7: termino7,
+        termino8: termino8,
+        termino9: termino9,
+
+        des_termino1: des_termino1,
+        des_termino2: des_termino2,
+        des_termino3: des_termino3,
+        des_termino4: des_termino4,
+        des_termino5: des_termino5,
+        des_termino6: des_termino6,
+        des_termino7: des_termino7,
+        des_termino8: des_termino8,
+        des_termino9: des_termino9
       });
   
       const blob = doc.getZip().generate({

@@ -140,11 +140,11 @@
             <div class="row">
               <div class="col-md-6">
                 <h5>Término</h5>
-                <input type="text" class="form-control" placeholder="Ingrese el término">
+                <input type="text" id="termino1" class="form-control" placeholder="Ingrese el término">
               </div>
               <div class="col-md-6">
                 <h5>Descripción</h5>
-                <input type="text" class="form-control" placeholder="Ingrese la descripción">
+                <input type="text" id="des_termino1" class="form-control" placeholder="Ingrese la descripción">
               </div>
             </div>
             <div class="row mt-3">
@@ -172,34 +172,36 @@
         <div class="modal-body">
           <div class="container">
             <div class="col">
-              <label>Introducción</label>
-              <textarea id="introduccion" class="form-control" rows="4" placeholder="Ingrese introducción"></textarea>
+              <h5>Introducción</h5>
+              <textarea id="introduccion" class="form-control" rows="3" placeholder="Ingrese introducción"></textarea>
             </div>
             <div class="col">
-              <label>Considereciones</label>
-              <textarea id="consideraciones" class="form-control" rows="4" placeholder="Ingrese consideraciones"></textarea>
+              <h5>Consideraciones</h5>
+              <textarea id="consideraciones" class="form-control" rows="3" placeholder="Ingrese consideraciones"></textarea>
             </div>
             <div class="col">
-              <label>Alcance</label>
-              <textarea id="alcance" class="form-control" rows="4" placeholder="Ingrese alcance"></textarea>
+              <h5>Alcance</h5>
+              <textarea id="alcance" class="form-control" rows="3" placeholder="Ingrese alcance"></textarea>
             </div>
             <div class="col">
-              <label>Estrategia</label>
-              <textarea id="estrategia" class="form-control" rows="4" placeholder="Ingrese estrategia"></textarea>
+              <h5>Estrategia</h5>
+              <textarea id="estrategia" class="form-control" rows="3" placeholder="Ingrese estrategia"></textarea>
             </div>
             <div class="col">
-              <label>Conclusiones</label>
-              <textarea id="conclusiones" class="form-control" rows="4" placeholder="Ingrese conclusiones"></textarea>
+              <h5>Conclusiones</h5>
+              <textarea id="conclusiones" class="form-control" rows="3" placeholder="Ingrese conclusiones"></textarea>
             </div>
             <div class="col">
-              <label>Recomendaciones</label>
-              <textarea id="recomendaciones" class="form-control" rows="4" placeholder="Ingrese recomendaciones"></textarea>
+              <h5>Recomendaciones</h5>
+              <textarea id="recomendaciones" class="form-control" rows="3" placeholder="Ingrese recomendaciones"></textarea>
             </div>
+            <!-- 
             <div class="row mt-3">
               <div class="col">
                 <button type="button" class="btn btn-secondary" id="btnGuardarDetalle">Guardar</button>
               </div>
             </div>
+            -->
           </div>
         </div>
         <div class="modal-footer">
@@ -230,16 +232,18 @@
     document.addEventListener("DOMContentLoaded", function () {
       const addRowBtn = document.getElementById("addRowBtn");
       const container = document.querySelector(".modal-body .container");
+      let rowCount = 1; 
   
       addRowBtn.addEventListener("click", function () {
+        rowCount++;
         const newRow = document.createElement("div");
         newRow.className = "row";
         newRow.innerHTML = `
           <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="Ingrese el término">
+            <input type="text" id="termino${rowCount}" class="form-control" placeholder="Ingrese el término">
           </div>
           <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="Ingrese la descripción">
+            <input type="text" id="des_termino${rowCount}" class="form-control" placeholder="Ingrese la descripción">
           </div>
         `;
         container.insertBefore(newRow, addRowBtn.parentNode.parentNode);
