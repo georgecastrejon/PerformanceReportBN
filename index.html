@@ -123,23 +123,23 @@
       </div>
 
       <div class="form-group">
-        <input type="text" id="piepagina" class="form-control" maxlength="30" placeholder="Pie de página">
+        <input type="text" id="piepagina" class="form-control" maxlength="100" placeholder="Pie de página">
       </div>
 
       <div class="form-group">
-        <input type="text" id="cliente" class="form-control" maxlength="30" placeholder="Cliente">
+        <input type="text" id="cliente" class="form-control" maxlength="100" placeholder="Cliente">
       </div>
 
       <div class="form-group">
-        <input type="text" id="tipoinforme" class="form-control" maxlength="30" placeholder="Tipo de informe">
+        <input type="text" id="tipoinforme" class="form-control" maxlength="100" placeholder="Tipo de informe">
       </div>
 
       <div class="form-group">
-        <input type="text" id="codigorq" class="form-control" maxlength="30" placeholder="Código del requerimiento">
+        <input type="text" id="codigorq" class="form-control" maxlength="100" placeholder="Código del requerimiento">
       </div>
 
       <div class="form-group">
-        <input type="text" id="nombrerq" class="form-control" maxlength="30" placeholder="Nombre del requerimiento">
+        <input type="text" id="nombrerq" class="form-control" maxlength="100" placeholder="Nombre del requerimiento">
       </div>
 
       <div class="form-group">
@@ -182,7 +182,7 @@
       </div>
 
       <div class="form-group">
-        <textarea id="descambio" class="form-control" rows="4" placeholder="Descripción del cambio"></textarea>
+        <textarea id="descambio" maxlength="200" class="form-control" rows="4" placeholder="Descripción del cambio"></textarea>
       </div>
 
       <div class="form-group">
@@ -368,13 +368,12 @@
             </div>
             <div class="row">
               <div class="col-md-5">
-                <input type="text" id="funcionalidad1" class="form-control" placeholder="Ingrese la funcionalidad">
+                <input type="text" id="tipofuncionalidad1" class="form-control" placeholder="Ingrese la funcionalidad">
               </div>
               <div class="form-group col-md-4">
                 <select id="tipoprueba1" class="form-control">
                   <option value="">Tipo de Prueba</option>    
-                  <option value="Carga">Carga</option>
-                  <option value="Estrés">Estrés</option>    
+                  <option value="Carga">Carga</option>    
                   <option value="Carga y Estrés">Carga y Estrés</option>
                 </select>
               </div>
@@ -384,13 +383,12 @@
             </div>
             <div class="row">
               <div class="col-md-5">
-                <input type="text" id="funcionalidad2" class="form-control" placeholder="Ingrese la funcionalidad">
+                <input type="text" id="tipofuncionalidad2" class="form-control" placeholder="Ingrese la funcionalidad">
               </div>
               <div class="form-group col-md-4">
                 <select id="tipoprueba2" class="form-control">
                   <option value="">Tipo de Prueba</option>    
-                  <option value="Carga">Carga</option>
-                  <option value="Estrés">Estrés</option>    
+                  <option value="Carga">Carga</option>   
                   <option value="Carga y Estrés">Carga y Estrés</option>
                 </select>
               </div>
@@ -400,34 +398,32 @@
             </div>
             <div class="row">
               <div class="col-md-5">
-                <input type="text" id="funcionalidad3" class="form-control" placeholder="Ingrese la funcionalidad">
+                <input type="text" id="tipofuncionalidad3" class="form-control" placeholder="Ingrese la funcionalidad">
               </div>
               <div class="form-group col-md-4">
                 <select id="tipoprueba3" class="form-control">
                   <option value="">Tipo de Prueba</option>    
-                  <option value="Carga">Carga</option>
-                  <option value="Estrés">Estrés</option>    
+                  <option value="Carga">Carga</option>   
                   <option value="Carga y Estrés">Carga y Estrés</option>
                 </select>
               </div>
               <div class="col-md-3">
-                <a href="">Ver detalle</a>
+                <a href="#" data-toggle="modal" data-target="#modalPruebaCargaEstres">Ver detalle</a>
               </div>
             </div>
             <div class="row">
               <div class="col-md-5">
-                <input type="text" id="funcionalidad4" class="form-control" placeholder="Ingrese la funcionalidad">
+                <input type="text" id="tipofuncionalidad4" class="form-control" placeholder="Ingrese la funcionalidad">
               </div>
               <div class="form-group col-md-4">
                 <select id="tipoprueba4" class="form-control">
                   <option value="">Tipo de Prueba</option>    
-                  <option value="Carga">Carga</option>
-                  <option value="Estrés">Estrés</option>    
+                  <option value="Carga">Carga</option>    
                   <option value="Carga y Estrés">Carga y Estrés</option>
                 </select>
               </div>
               <div class="col-md-3">
-                <a href="">Ver detalle</a>
+                <a href="#" data-toggle="modal" data-target="#modalPruebaCargaEstres">Ver detalle</a>
               </div>
             </div>
             <div class="row mt-3">
@@ -457,15 +453,15 @@
             <div class="column">
               <div class="col-md-10">
                 <h5>Número de usuarios</h5>
-                <input type="text" id="numusuarios" class="form-control" placeholder="Ingrese el número de usuarios">
+                <input type="text" id="numerousuariocarga1" class="form-control" placeholder="Ingrese el número de usuarios">
               </div>
               <div class="col-md-10">
                 <h5>Tiempo de la prueba</h5>
-                <input type="text" id="tiempoprueba" class="form-control" placeholder="Ingrese el tiempo de la prueba (minutos)">
+                <input type="text" id="tiempopruebacarga1" class="form-control" placeholder="Ingrese el tiempo de la prueba (minutos)">
               </div>
               <div class="col-md-4">
                 <h5>Gráfico</h5>
-                <input type="file" class="btn btn-secondary" id="grafico">
+                <input type="file" class="btn btn-secondary" id="graficocarga1">
               </div>
             </div>
             <div class="row mt-3">
@@ -498,15 +494,15 @@
               </div>
               <div class="col-md-10">
                 <h6>Número de usuarios</h6>
-                <input type="text" id="numusuarios" class="form-control" placeholder="Ingrese el número de usuarios">
+                <input type="text" id="numerousuariocarga2" class="form-control" placeholder="Ingrese el número de usuarios">
               </div>
               <div class="col-md-10">
                 <h6>Tiempo de la prueba</h6>
-                <input type="text" id="tiempoprueba" class="form-control" placeholder="Ingrese el tiempo de la prueba (minutos)">
+                <input type="text" id="tiempopruebacarga2" class="form-control" placeholder="Ingrese el tiempo de la prueba (minutos)">
               </div>
               <div class="col-md-4">
                 <h6>Gráfico</h6>
-                <input type="file" class="btn btn-secondary" id="grafico">
+                <input type="file" class="btn btn-secondary" id="graficocarga2">
               </div>
             </div>
 
@@ -531,10 +527,10 @@
                 <input type="text" id="hito1" class="form-control">
               </div>
               <div class="col-md-5">
-                <input type="text" id="" class="form-control">
+                <input type="text" id="numerousuarioestres1" class="form-control">
               </div>
               <div class="col-md-5">
-                <input type="text" id="" class="form-control">
+                <input type="text" id="tiempopruebaestres1" class="form-control">
               </div>
             </div>
             <div class="row">
@@ -542,10 +538,10 @@
                 <input type="text" id="hito2" class="form-control">
               </div>
               <div class="col-md-5">
-                <input type="text" id="" class="form-control">
+                <input type="text" id="numerousuarioestres2" class="form-control">
               </div>
               <div class="col-md-5">
-                <input type="text" id="" class="form-control">
+                <input type="text" id="tiempopruebaestres2" class="form-control">
               </div>
             </div>
             <div class="row">
@@ -553,10 +549,10 @@
                 <input type="text" id="hito3" class="form-control">
               </div>
               <div class="col-md-5">
-                <input type="text" id="" class="form-control">
+                <input type="text" id="numerousuarioestres3" class="form-control">
               </div>
               <div class="col-md-5">
-                <input type="text" id="" class="form-control">
+                <input type="text" id="tiempopruebaestres3" class="form-control">
               </div>
             </div>
             <div class="row">
@@ -564,10 +560,10 @@
                 <input type="text" id="hito4" class="form-control">
               </div>
               <div class="col-md-5">
-                <input type="text" id="" class="form-control">
+                <input type="text" id="numerousuarioestres4" class="form-control">
               </div>
               <div class="col-md-5">
-                <input type="text" id="" class="form-control">
+                <input type="text" id="tiempopruebaestres4" class="form-control">
               </div>
             </div>
             <div class="row">
@@ -575,10 +571,10 @@
                 <input type="text" id="hito5" class="form-control">
               </div>
               <div class="col-md-5">
-                <input type="text" id="" class="form-control">
+                <input type="text" id="numerousuarioestres5" class="form-control">
               </div>
               <div class="col-md-5">
-                <input type="text" id="" class="form-control">
+                <input type="text" id="tiempopruebaestres5" class="form-control">
               </div>
             </div>
             <div class="row">
@@ -586,16 +582,16 @@
                 <input type="text" id="hito6" class="form-control">
               </div>
               <div class="col-md-5">
-                <input type="text" id="" class="form-control">
+                <input type="text" id="numerousuarioestres6" class="form-control">
               </div>
               <div class="col-md-5">
-                <input type="text" id="" class="form-control">
+                <input type="text" id="tiempopruebaestres6" class="form-control">
               </div>
             </div>
 
             <div class="row">
               <div class="col-md-2">
-                <input type="file" class="btn btn-secondary" id="grafico">
+                <input type="file" class="btn btn-secondary" id="graficoestres1">
               </div>
             </div>
             
@@ -626,11 +622,11 @@
             <div class="column">
               <div class="col-md-12">
                 <h5>Definición</h5>
-                <textarea id="descambio" class="form-control" rows="4" placeholder=""></textarea>
+                <textarea id="criterioaceptacion" class="form-control" rows="4" placeholder=""></textarea>
               </div>
               <div class="col-md-4">
                 <h5>Gráfico</h5>
-                <input type="file" class="btn btn-secondary" id="grafico">
+                <input type="file" class="btn btn-secondary" id="graficocriterioaceptacion">
               </div>
             </div>
 
@@ -737,7 +733,6 @@
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
         </div>
       </div>
-    </div>
   </div>
 
     </form>
@@ -753,8 +748,8 @@
   <script src="https://unpkg.com/pizzip@3.1.4/dist/pizzip-utils.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <script src="cargarPredeterminados.js"></script>
   <script src="descargarWordTemplate.js"></script>
+  <script src="cargarPredeterminados.js"></script>
   <script src="cargarModalDetalle.js"></script>
   <script src="cargarModalGlosarioTerminos.js"></script>
   <script src="limpiarCampos.js"></script>
