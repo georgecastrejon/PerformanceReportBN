@@ -58,6 +58,71 @@
       </div>
 
       <div class="form-group">
+        <div class="row">
+          <div class="col">
+            <p style="color: white"><b>Estrategia de la pruebas</b></p>
+          </div>
+          <div class="col-auto">
+            <label for="estrategiapruebas" class="btn btn-primary transparent-background">
+              <img src="./Common/Images/Bottons/subir.png" alt="Seleccionar archivo" width="20" height="20" data-toggle="modal" data-target="#modalEstrategiaPruebas">
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col">
+            <p style="color: white"><b>Criterios de Aceptación</b></p>
+          </div>
+          <div class="col-auto">
+            <label for="criteriosaceptacion" class="btn btn-primary transparent-background">
+              <img src="./Common/Images/Bottons/subir.png" alt="Seleccionar archivo" width="20" height="20" data-toggle="modal" data-target="#modalCriterioAceptacion">
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col">
+            <p style="color: white"><b>Resumen de las pruebas</b></p>
+          </div>
+          <div class="col-auto">
+            <label for="resumenpruebas" class="btn btn-primary transparent-background">
+              <img src="./Common/Images/Bottons/subir.png" alt="Seleccionar archivo" width="20" height="20" data-toggle="modal" data-target="#">
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col">
+            <p style="color: white"><b>Resultados de las pruebas</b></p>
+          </div>
+          <div class="col-auto">
+            <label for="resultadospruebas" class="btn btn-primary transparent-background">
+              <img src="./Common/Images/Bottons/subir.png" alt="Seleccionar archivo" width="20" height="20" data-toggle="modal" data-target="#">
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col">
+            <p style="color: white"><b>Conclusiones de las pruebas</b></p>
+          </div>
+          <div class="col-auto">
+            <label for="conclusionespruebas" class="btn btn-primary transparent-background">
+              <img src="./Common/Images/Bottons/subir.png" alt="Seleccionar archivo" width="20" height="20" data-toggle="modal" data-target="#">
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
         <input type="text" id="piepagina" class="form-control" maxlength="30" placeholder="Pie de página">
       </div>
 
@@ -123,11 +188,11 @@
       <div class="form-group">
         <input type="submit" class="btn btn-primary" value="Descargar" id="generateButton"> 
         <input type="submit" class="btn btn-secondary" value="Precargar" id="precargar">
-        <input type="reset" class="btn btn-secondary" value="Limpiar" id="limpiar">
+        <input type="reset" class="btn btn-secondary" value="Limpiar" id="limpiarcampos">
         <input type="file" class="btn btn-secondary" id="doc">
       </div>
     
-      <!-- Modal Glosario Terminos-->
+  <!-- Modal Glosario Terminos-->
   <div class="modal fade" id="modalTerminos">
     <div class="modal-dialog modal-lg"> 
       <div class="modal-content">
@@ -211,6 +276,22 @@
                 <input type="text" id="des_termino9" class="form-control" placeholder="Ingrese la descripción">
               </div>
             </div>
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" id="termino10" class="form-control" placeholder="Ingrese el término">
+              </div>
+              <div class="col-md-6">
+                <input type="text" id="des_termino10" class="form-control" placeholder="Ingrese la descripción">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" id="termino11" class="form-control" placeholder="Ingrese el término">
+              </div>
+              <div class="col-md-6">
+                <input type="text" id="des_termino11" class="form-control" placeholder="Ingrese la descripción">
+              </div>
+            </div>
             <div class="row mt-3">
               <div class="col">
                 <button type="button" class="btn btn-secondary" id="addRowBtn">Agregar</button>
@@ -250,18 +331,6 @@
               <h5>Alcance</h5>
               <textarea id="alcance" class="form-control" rows="3" placeholder="Ingrese alcance"></textarea>
             </div>
-            <div class="col">
-              <h5>Estrategia</h5>
-              <textarea id="estrategia" class="form-control" rows="3" placeholder="Ingrese estrategia"></textarea>
-            </div>
-            <div class="col">
-              <h5>Conclusiones</h5>
-              <textarea id="conclusiones" class="form-control" rows="3" placeholder="Ingrese conclusiones"></textarea>
-            </div>
-            <div class="col">
-              <h5>Recomendaciones</h5>
-              <textarea id="recomendaciones" class="form-control" rows="3" placeholder="Ingrese recomendaciones"></textarea>
-            </div> 
             <div class="row mt-3">
               <div class="col">
                 <button type="button" class="btn btn-secondary" id="precargarDetalle">Precargar</button>
@@ -275,7 +344,402 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal Estrategia de las Pruebas -->
+  <div class="modal fade" id="modalEstrategiaPruebas">
+    <div class="modal-dialog modal-lg"> 
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Estrategia de Pruebas</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5">
+                <h5>Funcionalidad</h5>
+              </div>
+              <div class="col-md-4">
+                <h5>Tipo prueba</h5>
+              </div>
+              <div class="col-md-3">
+                <h5>Detalle</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5">
+                <input type="text" id="funcionalidad1" class="form-control" placeholder="Ingrese la funcionalidad">
+              </div>
+              <div class="form-group col-md-4">
+                <select id="tipoprueba1" class="form-control">
+                  <option value="">Tipo de Prueba</option>    
+                  <option value="Carga">Carga</option>
+                  <option value="Estrés">Estrés</option>    
+                  <option value="Carga y Estrés">Carga y Estrés</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <a href="#" data-toggle="modal" data-target="#modalPruebaCarga">Ver detalle</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5">
+                <input type="text" id="funcionalidad2" class="form-control" placeholder="Ingrese la funcionalidad">
+              </div>
+              <div class="form-group col-md-4">
+                <select id="tipoprueba2" class="form-control">
+                  <option value="">Tipo de Prueba</option>    
+                  <option value="Carga">Carga</option>
+                  <option value="Estrés">Estrés</option>    
+                  <option value="Carga y Estrés">Carga y Estrés</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <a href="#" data-toggle="modal" data-target="#modalPruebaCargaEstres">Ver detalle</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5">
+                <input type="text" id="funcionalidad3" class="form-control" placeholder="Ingrese la funcionalidad">
+              </div>
+              <div class="form-group col-md-4">
+                <select id="tipoprueba3" class="form-control">
+                  <option value="">Tipo de Prueba</option>    
+                  <option value="Carga">Carga</option>
+                  <option value="Estrés">Estrés</option>    
+                  <option value="Carga y Estrés">Carga y Estrés</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <a href="">Ver detalle</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5">
+                <input type="text" id="funcionalidad4" class="form-control" placeholder="Ingrese la funcionalidad">
+              </div>
+              <div class="form-group col-md-4">
+                <select id="tipoprueba4" class="form-control">
+                  <option value="">Tipo de Prueba</option>    
+                  <option value="Carga">Carga</option>
+                  <option value="Estrés">Estrés</option>    
+                  <option value="Carga y Estrés">Carga y Estrés</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <a href="">Ver detalle</a>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <input type="reset" class="btn btn-secondary" value="Limpiar" id="limpiarcampos">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Modal Prueba de Carga -->
+  <div class="modal fade" id="modalPruebaCarga">
+    <div class="modal-dialog modal-lg"> 
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Prueba de Carga</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="column">
+              <div class="col-md-10">
+                <h5>Número de usuarios</h5>
+                <input type="text" id="numusuarios" class="form-control" placeholder="Ingrese el número de usuarios">
+              </div>
+              <div class="col-md-10">
+                <h5>Tiempo de la prueba</h5>
+                <input type="text" id="tiempoprueba" class="form-control" placeholder="Ingrese el tiempo de la prueba (minutos)">
+              </div>
+              <div class="col-md-4">
+                <h5>Gráfico</h5>
+                <input type="file" class="btn btn-secondary" id="grafico">
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <input type="reset" class="btn btn-secondary" value="Limpiar" id="limpiarcampos">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Prueba de Carga y Estrés -->
+  <div class="modal fade" id="modalPruebaCargaEstres">
+    <div class="modal-dialog modal-lg"> 
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Pruebas de Carga y Estrés</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10">
+                <h5>Prueba de Carga</h5>
+              </div>
+              <div class="col-md-10">
+                <h6>Número de usuarios</h6>
+                <input type="text" id="numusuarios" class="form-control" placeholder="Ingrese el número de usuarios">
+              </div>
+              <div class="col-md-10">
+                <h6>Tiempo de la prueba</h6>
+                <input type="text" id="tiempoprueba" class="form-control" placeholder="Ingrese el tiempo de la prueba (minutos)">
+              </div>
+              <div class="col-md-4">
+                <h6>Gráfico</h6>
+                <input type="file" class="btn btn-secondary" id="grafico">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <h5>Prueba de Estrés</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <h6>Hitos</h5>
+              </div>
+              <div class="col-md-5">
+                <h6>Número de usuarios</h5>
+              </div>
+              <div class="col-md-5">
+                <h6>Lapsos de tiempo</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <input type="text" id="hito1" class="form-control">
+              </div>
+              <div class="col-md-5">
+                <input type="text" id="" class="form-control">
+              </div>
+              <div class="col-md-5">
+                <input type="text" id="" class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <input type="text" id="hito2" class="form-control">
+              </div>
+              <div class="col-md-5">
+                <input type="text" id="" class="form-control">
+              </div>
+              <div class="col-md-5">
+                <input type="text" id="" class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <input type="text" id="hito3" class="form-control">
+              </div>
+              <div class="col-md-5">
+                <input type="text" id="" class="form-control">
+              </div>
+              <div class="col-md-5">
+                <input type="text" id="" class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <input type="text" id="hito4" class="form-control">
+              </div>
+              <div class="col-md-5">
+                <input type="text" id="" class="form-control">
+              </div>
+              <div class="col-md-5">
+                <input type="text" id="" class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <input type="text" id="hito5" class="form-control">
+              </div>
+              <div class="col-md-5">
+                <input type="text" id="" class="form-control">
+              </div>
+              <div class="col-md-5">
+                <input type="text" id="" class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <input type="text" id="hito6" class="form-control">
+              </div>
+              <div class="col-md-5">
+                <input type="text" id="" class="form-control">
+              </div>
+              <div class="col-md-5">
+                <input type="text" id="" class="form-control">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-2">
+                <input type="file" class="btn btn-secondary" id="grafico">
+              </div>
+            </div>
+            
+            <div class="row mt-3">
+              <div class="col">
+                <input type="reset" class="btn btn-secondary" value="Limpiar" id="limpiarcampos">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Criterio de Aceptacion -->
+  <div class="modal fade" id="modalCriterioAceptacion">
+    <div class="modal-dialog modal-lg"> 
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Criterios de Aceptación</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="column">
+              <div class="col-md-12">
+                <h5>Definición</h5>
+                <textarea id="descambio" class="form-control" rows="4" placeholder=""></textarea>
+              </div>
+              <div class="col-md-4">
+                <h5>Gráfico</h5>
+                <input type="file" class="btn btn-secondary" id="grafico">
+              </div>
+            </div>
+
+            <div class="column"> 
+              <div class="row">
+                <div class="col-md-4">
+                  <h6>Funcionalidad</h5>
+                </div>
+                <div class="col-md-2">
+                  <h6>TP por mes</h5>
+                </div>
+                <div class="col-md-2">
+                  <h6>TP por día</h5>
+                </div>
+                <div class="col-md-2">
+                  <h6>TP por hora</h5>
+                </div>
+                <div class="col-md-2">
+                  <h6>CA por hora</h5>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <input type="text" id="" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" id="" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" id="" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" id="" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" id="" class="form-control">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <input type="text" id="" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" id="" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" id="" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" id="" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" id="" class="form-control">
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-4">
+                  <input type="text" id="" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" id="" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" id="" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" id="" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" id="" class="form-control">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <input type="text" id="" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" id="" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" id="" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" id="" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" id="" class="form-control">
+                </div>
+              </div>
+            </div>
+          </div>  
+            <div class="row mt-3">
+              <div class="col">
+                <input type="reset" class="btn btn-secondary" value="Limpiar" id="limpiarcampos">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
     </form>
   </div>
 
@@ -290,11 +754,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <script src="cargarPredeterminados.js"></script>
-  <script src="limpiarCampos.js"></script>
   <script src="descargarWordTemplate.js"></script>
   <script src="cargarModalDetalle.js"></script>
-  <script src="cargarModalGlosario.js"></script>
-
+  <script src="cargarModalGlosarioTerminos.js"></script>
+  <script src="limpiarCampos.js"></script>
+  
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const addRowBtn = document.getElementById("addRowBtn");

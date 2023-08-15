@@ -16,9 +16,6 @@ function generateDocument() {
     const introduccion = document.getElementById('introduccion').value;
     const consideraciones = document.getElementById('consideraciones').value;
     const alcance = document.getElementById('alcance').value;
-    const estrategia = document.getElementById('estrategia').value;
-    const conclusiones = document.getElementById('conclusiones').value;
-    const recomendaciones = document.getElementById('recomendaciones').value;
     
     const termino1 = document.getElementById('termino1').value;
     const termino2 = document.getElementById('termino2').value;
@@ -29,6 +26,8 @@ function generateDocument() {
     const termino7 = document.getElementById('termino7').value;
     const termino8 = document.getElementById('termino8').value;
     const termino9 = document.getElementById('termino9').value;
+    const termino10 = document.getElementById('termino10').value;
+    const termino11 = document.getElementById('termino11').value;
 
     const des_termino1 = document.getElementById('des_termino1').value;
     const des_termino2 = document.getElementById('des_termino2').value;
@@ -39,6 +38,8 @@ function generateDocument() {
     const des_termino7 = document.getElementById('des_termino7').value;
     const des_termino8 = document.getElementById('des_termino8').value;
     const des_termino9 = document.getElementById('des_termino9').value; 
+    const des_termino10 = document.getElementById('des_termino10').value; 
+    const des_termino11 = document.getElementById('des_termino11').value; 
 
     if (docs.files.length === 0) {
       alert("No files selected");
@@ -73,9 +74,6 @@ function generateDocument() {
         introduccion: introduccion,
         consideraciones: consideraciones,
         alcance: alcance,
-        estrategia: estrategia,
-        conclusiones: conclusiones,
-        recomendaciones: recomendaciones,
         
         termino1: termino1,
         termino2: termino2,
@@ -86,6 +84,8 @@ function generateDocument() {
         termino7: termino7,
         termino8: termino8,
         termino9: termino9,
+        termino10: termino10,
+        termino11: termino11,
 
         des_termino1: des_termino1,
         des_termino2: des_termino2,
@@ -95,7 +95,9 @@ function generateDocument() {
         des_termino6: des_termino6,
         des_termino7: des_termino7,
         des_termino8: des_termino8,
-        des_termino9: des_termino9
+        des_termino9: des_termino9,
+        des_termino10: des_termino10,
+        des_termino11: des_termino11
       });
   
       const blob = doc.getZip().generate({
