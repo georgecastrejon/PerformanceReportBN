@@ -41,6 +41,8 @@ function generateDocument() {
     const des_termino10 = document.getElementById('des_termino10').value; 
     const des_termino11 = document.getElementById('des_termino11').value; 
 
+    const nombreaplicacion1 = document.getElementById('nombreaplicacion1').value;
+
     const tipofuncionalidad1 = document.getElementById('tipofuncionalidad1').value;
     const tipofuncionalidad2 = document.getElementById('tipofuncionalidad2').value;
     const tipofuncionalidad3 = document.getElementById('tipofuncionalidad3').value;
@@ -51,41 +53,46 @@ function generateDocument() {
     const tipoprueba3 = document.getElementById('tipoprueba3').value;
     const tipoprueba4 = document.getElementById('tipoprueba4').value;
 
-    const numerousuariocarga1 = document.getElementById('numerousuariocarga1').value;
-    const numerousuariocarga2 = document.getElementById('numerousuariocarga2').value;
-    //const numerousuariocarga3 = document.getElementById('numerousuariocarga3').value;
-    //const numerousuariocarga4 = document.getElementById('numerousuariocarga4').value;
-
-    const tiempopruebacarga1 = document.getElementById('tiempopruebacarga1').value;
-    const tiempopruebacarga2 = document.getElementById('tiempopruebacarga2').value;
-    //const tiempopruebacarga3 = document.getElementById('tiempopruebacarga3').value;
-    //const tiempopruebacarga4 = document.getElementById('tiempopruebacarga4').value;
-
-    const graficocarga1 = document.getElementById('graficocarga1').value;
-    const graficocarga2 = document.getElementById('graficocarga2').value;
-    //const graficocarga3 = document.getElementById('graficocarga3').value;
-    //const graficocarga4 = document.getElementById('graficocarga4').value;
-
-    const numerousuarioestres1 = document.getElementById('numerousuarioestres1').value;
-    const numerousuarioestres2 = document.getElementById('numerousuarioestres2').value;
-    const numerousuarioestres3 = document.getElementById('numerousuarioestres3').value;
-    const numerousuarioestres4 = document.getElementById('numerousuarioestres4').value;
-    const numerousuarioestres5 = document.getElementById('numerousuarioestres5').value;
-    const numerousuarioestres6 = document.getElementById('numerousuarioestres6').value;
-
-    const tiempopruebaestres1 = document.getElementById('tiempopruebaestres1').value;
-    const tiempopruebaestres2 = document.getElementById('tiempopruebaestres2').value;
-    const tiempopruebaestres3 = document.getElementById('tiempopruebaestres3').value;
-    const tiempopruebaestres4 = document.getElementById('tiempopruebaestres4').value;
-    const tiempopruebaestres5 = document.getElementById('tiempopruebaestres5').value;
-    const tiempopruebaestres6 = document.getElementById('tiempopruebaestres6').value;
-
-    const graficoestres1 = document.getElementById('graficoestres1').value;
-    //const graficoestres2 = document.getElementById('graficoestres2').value;
-    //const graficoestres3 = document.getElementById('graficoestres3').value;
-
     const criterioaceptacion = document.getElementById('criterioaceptacion').value;
-    const graficocriterioaceptacion = document.getElementById('graficocriterioaceptacion').value;
+    const graficocriterioaceptacion1 = document.getElementById('graficocriterioaceptacion1').value;
+    const graficocriterioaceptacion2 = document.getElementById('graficocriterioaceptacion2').value;
+
+
+    const resultadocarga1 = document.getElementById('resultadocarga1').value;
+    const promediocarga1 = document.getElementById('promediocarga1').value;
+    const rangocarga1 = document.getElementById('rangocarga1').value;
+    const tpscarga1 = document.getElementById('tpscarga1').value;
+    const resultadocarga2 = document.getElementById('resultadocarga2').value;
+    const promediocarga2 = document.getElementById('promediocarga2').value;
+    const rangocarga2 = document.getElementById('rangocarga2').value;
+    const tpscarga2 = document.getElementById('tpscarga2').value;
+    const resultadocarga3 = document.getElementById('resultadocarga3').value;
+    const promediocarga3 = document.getElementById('promediocarga3').value;
+    const rangocarga3 = document.getElementById('rangocarga3').value;
+    const tpscarga3 = document.getElementById('tpscarga3').value;
+    const resultadocarga4 = document.getElementById('resultadocarga4').value;
+    const promediocarga4 = document.getElementById('promediocarga4').value;
+    const rangocarga4 = document.getElementById('rangocarga4').value;
+    const tpscarga4 = document.getElementById('tpscarga4').value;
+
+    const resultadoestres1 = document.getElementById('resultadoestres1').value;
+    const promedioestres1 = document.getElementById('promedioestres1').value;
+    const rangoestres1 = document.getElementById('rangoestres1').value;
+    const tpsestres1 = document.getElementById('tpsestres1').value;
+    const resultadoestres2 = document.getElementById('resultadoestres2').value;
+    const promedioestres2 = document.getElementById('promedioestres2').value;
+    const rangoestres2 = document.getElementById('rangoestres2').value;
+    const tpsestres2 = document.getElementById('tpsestres2').value;
+    const resultadoestres3 = document.getElementById('resultadoestres3').value;
+    const promedioestres3 = document.getElementById('promedioestres3').value;
+    const rangoestres3 = document.getElementById('rangoestres3').value;
+    const tpsestres3 = document.getElementById('tpsestres3').value;
+
+
+    const conclusionespruebacarga = document.getElementById('conclusionespruebacarga').value;
+    const conclusionespruebaestres = document.getElementById('conclusionespruebaestres').value;
+
+    const recomendaciones = document.getElementById('recomendaciones').value;
 
 
     if (docs.files.length === 0) {
@@ -148,6 +155,8 @@ function generateDocument() {
         des_termino10: des_termino10,
         des_termino11: des_termino11,
 
+        nombreaplicacion1: nombreaplicacion1,
+
         tipofuncionalidad1: tipofuncionalidad1,
         tipofuncionalidad2: tipofuncionalidad2,
         tipofuncionalidad3: tipofuncionalidad3,
@@ -158,41 +167,46 @@ function generateDocument() {
         tipoprueba3: tipoprueba3,
         tipoprueba4: tipoprueba4,
 
-        numerousuariocarga1: numerousuariocarga1,
-        numerousuariocarga2: numerousuariocarga2,
-        //numerousuariocarga3: numerousuariocarga3,
-        //numerousuariocarga4: numerousuariocarga4,
-
-        tiempopruebacarga1: tiempopruebacarga1,
-        tiempopruebacarga2: tiempopruebacarga2,
-        //tiempopruebacarga3: tiempopruebacarga3,
-        //tiempopruebacarga4: tiempopruebacarga4,
-
-        graficocarga1: graficocarga1,
-        graficocarga2: graficocarga2,
-        //graficocarga3: graficocarga3,
-        //graficocarga4: graficocarga4,
-
-        numerousuarioestres1: numerousuarioestres1,
-        numerousuarioestres2: numerousuarioestres2,
-        numerousuarioestres3: numerousuarioestres3,
-        numerousuarioestres4: numerousuarioestres4,
-        numerousuarioestres4: numerousuarioestres5,
-        numerousuarioestres4: numerousuarioestres6,
-
-        tiempopruebaestres1: tiempopruebaestres1,
-        tiempopruebaestres2: tiempopruebaestres2,
-        tiempopruebaestres3: tiempopruebaestres3,
-        tiempopruebaestres4: tiempopruebaestres4,
-        tiempopruebaestres5: tiempopruebaestres5,
-        tiempopruebaestres6: tiempopruebaestres6,
-
-        graficoestres1: graficoestres1,
-        //graficoestres2: graficoestres2,
-        //graficoestres3: graficoestres3,
-
         criterioaceptacion: criterioaceptacion,
-        graficocriterioaceptacion: graficocriterioaceptacion
+        graficocriterioaceptacion1: graficocriterioaceptacion1,
+        graficocriterioaceptacion2: graficocriterioaceptacion2,
+
+
+        resultadocarga1: resultadocarga1,
+        promediocarga1: promediocarga1, 
+        rangocarga1: rangocarga1,
+        tpscarga1: tpscarga1,
+        resultadocarga2: resultadocarga2,
+        promediocarga2: promediocarga2, 
+        rangocarga2: rangocarga2,
+        tpscarga2: tpscarga2,
+        resultadocarga3: resultadocarga3,
+        promediocarga3: promediocarga3, 
+        rangocarga3: rangocarga3,
+        tpscarga3: tpscarga3,
+        resultadocarga4: resultadocarga4,
+        promediocarga4: promediocarga4, 
+        rangocarga4: rangocarga4,
+        tpscarga4: tpscarga4,
+
+        resultadoestres1: resultadoestres1,
+        promedioestres1: promedioestres1,
+        rangoestres1: rangoestres1,
+        tpsestres1: tpsestres1,
+        resultadoestres2: resultadoestres2,
+        promedioestres2: promedioestres2,
+        rangoestres2: rangoestres2,
+        tpsestres2: tpsestres2,
+        resultadoestres3: resultadoestres3,
+        promedioestres3: promedioestres3,
+        rangoestres3: rangoestres3,
+        tpsestres3: tpsestres3,
+
+
+        conclusionespruebacarga: conclusionespruebacarga,
+        conclusionespruebaestres: conclusionespruebaestres,
+
+        recomendaciones: recomendaciones
       });
   
       const blob = doc.getZip().generate({
@@ -203,8 +217,6 @@ function generateDocument() {
   
       saveAs(blob, "output.docx");
     };
-
-    reader.readAsDataURL(graficocarga1File);
   }
 
 function init() {
